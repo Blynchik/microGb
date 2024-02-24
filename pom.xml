@@ -19,6 +19,7 @@
 		<module>task-service</module>
         <module>performer-service</module>
         <module>gateway</module>
+        <module>metric</module>
     </modules>
 	<properties>
 		<java.version>17</java.version>
