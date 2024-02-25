@@ -9,13 +9,12 @@ import com.micro.task.model.Task;
 public class Converter {
 
         public TaskDto getDto(Task task) {
-        TaskDto dto = new TaskDto();
-        dto.setId(task.getId());
-        dto.setDescr(task.getDescr());
-        dto.setStatus(task.getStatus());
-        dto.setCreatedAt(task.getCreatedAt());
-        dto.setPerformersId(task.getPerformers().stream()
-                .map(Performer::getId).toList());
-        return dto;
+            return TaskDto.builder()
+                .id(task.getId())
+                .descr(task.getDescr())
+                .status(task.getStatus())
+                .createdAt(task.getCreatedAt())
+                .build();
+
     }
 }
